@@ -105,16 +105,37 @@ def apply_sobel(image, orient='x'):
         
     return apply_convolution(image, kernel)
 
-def apply_laplacian(image):
+def apply_laplacian(image, method='standard'):
     """
-    Laplacian Operator (Đạo hàm bậc 2).
-    Phát hiện biên đa hướng.
+    Laplacian Operator với nhiều biến thể kernel khác nhau.
+    - 'standard': 4-neighbor (Cơ bản).
+    - 'enhanced': 8-neighbor (Bắt biên mạnh hơn, gồm cả đường chéo).
+    - 'log': Laplacian of Gaussian 5x5 (Giảm nhiễu tốt nhất).
     """
-    # Kernel Laplacian thủ công
-    kernel = np.array([[0, -1, 0], 
-                       [-1, 4, -1], 
-                       [0, -1, 0]], dtype=np.float32)
-    
+    if method == 'standard':
+        # 4-neighbor: Đạo hàm bậc 2 theo X và Y
+        kernel = np.array([[0, -1, 0], 
+                           [-1, 4, -1], 
+                           [0, -1, 0]], dtype=np.float32)
+        
+    elif method == 'enhanced':
+        # 8-neighbor: Bao gồm cả đường chéo -> Đẳng hướng (Isotropic) tốt hơn
+        kernel = np.array([[-1, -1, -1], 
+                           [-1, 8, -1], 
+                           [-1, -1, -1]], dtype=np.float32)
+        
+    elif method == 'log':
+        # LoG (Laplacian of Gaussian) 5x5 approximation
+        # Đây là xấp xỉ của hàm "Mexican Hat"
+        # Giúp làm trơn nhiễu trước khi tính đạo hàm
+        kernel = np.array([[0,  0, -1,  0,  0],
+                           [0, -1, -2, -1,  0],
+                           [-1, -2, 16, -2, -1],
+                           [0, -1, -2, -1,  0],
+                           [0,  0, -1,  0,  0]], dtype=np.float32)
+    else:
+        raise ValueError("Method phải là 'standard', 'enhanced' hoặc 'log'")
+
     return apply_convolution(image, kernel)
 
 def apply_gaussian_highpass(image, kernel_size=5, sigma=1.0):
