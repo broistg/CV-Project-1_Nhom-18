@@ -44,7 +44,6 @@ def add_salt_pepper_noise(image, amount=0.05):
     num_pepper = int(np.ceil(amount * image.size * 0.5))
     
     # Tạo tọa độ ngẫu nhiên cho Salt (Trắng - 255)
-    # np.random.randint(0, i) sẽ sinh số từ 0 đến i-1 (hợp lệ cho index)
     coords_salt = [np.random.randint(0, i, num_salt) for i in image.shape]
     noisy[tuple(coords_salt)] = 255
 
