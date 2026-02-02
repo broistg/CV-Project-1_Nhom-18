@@ -1,5 +1,7 @@
 # CV Project 1: Biểu diễn ảnh màu và Lọc tín hiệu
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/broistg/CV-Project-1_Nhom-18/blob/main/notebooks/CV_Project_1_Demo.ipynb)
+
 Bài tập lớn 1 - Computer Vision | HK 2025-2026 | Giảng viên: ThS. Võ Thanh Hùng
 
 ## 📖 Giới thiệu
@@ -24,14 +26,14 @@ Sử dụng **Python** và **OpenCV**.
 ```
 CV-Project-1_Nhom-18/
 ├── data/
-│   ├── input/              # Ảnh đầu vào
-│   └── output/             # Ảnh kết quả
+│   ├── input/                  # Ảnh đầu vào
+│   └── output/                 # Ảnh kết quả
 ├── notebooks/
-│   └── demo_project1.ipynb # File demo chính
+│   └── CV_Project_1_Demo.ipynb # File demo chính
 ├── src/
-│   ├── color_ops.py        # Xử lý màu & kênh
-│   ├── spatial_filters.py  # Low-pass & High-pass filters
-│   └── utils.py            # Hàm hỗ trợ
+│   ├── color_ops.py            # Xử lý màu & kênh
+│   ├── spatial_filters.py      # Low-pass & High-pass filters
+│   └── utils.py                # Hàm hỗ trợ
 ├── report/
 │   └── CV_Project_1.pdf
 ├── requirements.txt
@@ -56,25 +58,24 @@ pip install -r requirements.txt
 ## 🚀 Hướng dẫn chạy
 
 **Cách 1: Google Colab (Khuyên dùng)**
-1. Truy cập file `notebooks/demo_project1.ipynb` trên GitHub
-2. Nhấn nút "Open in Colab"
-3. Nhấn nút "Run all" trong Colab để chạy demo dự án.
+1. Truy cập vào link demo Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/broistg/CV-Project-1_Nhom-18/blob/main/notebooks/CV_Project_1_Demo.ipynb)
+2. Nhấn nút "Run all" trong Colab để chạy demo dự án.
 
 **Cách 2: Local**
 ```bash
-jupyter notebook notebooks/demo_project1.ipynb
+jupyter notebook notebooks/CV_Project_1_Demo.ipynb
 ```
 
 ## 📝 Chức năng đã hiện thực
 
 **Phần 1: Biểu diễn ảnh**
-- [ ] Chuyển đổi RGB và Grayscale
-- [ ] Tách/gộp các kênh màu
-- [ ] Hoán đổi màu
+- [x] Chuyển đổi RGB và Grayscale
+- [x] Tách/gộp các kênh màu
+- [x] Hoán đổi màu
 
 **Phần 2: Lọc ảnh**
-- [ ] Low-pass: Mean Filter, Gaussian Filter
-- [ ] High-pass: Sobel Filter, Laplacian Filter
+- [x] Low-pass: Mean Filter, Gaussian Filter
+- [x] High-pass: Sobel Filter, Laplacian Filter
 - [ ] Visualization: So sánh ảnh gốc với sau xử lý
 
 ## 🤝 Cam kết
