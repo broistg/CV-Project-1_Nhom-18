@@ -79,20 +79,3 @@ def show_comparison(img1, img2, title1="Original", title2="Processed", cmap1='gr
     
     plt.tight_layout()
     plt.show()
-
-def plot_histogram_comparison(img_orig, img_proc):
-    """
-    Vẽ biểu đồ Histogram so sánh phân bố cường độ sáng.
-    Giúp phân tích độ tương phản hoặc hiệu quả cân bằng sáng.
-    """
-    plt.figure(figsize=(10, 4))
-    
-    plt.subplot(1, 2, 1)
-    plt.hist(img_orig.ravel(), 256, (0, 256), color='blue', alpha=0.7)
-    plt.title('Histogram Ảnh Gốc')
-    
-    plt.subplot(1, 2, 2)
-    plt.hist(img_proc.ravel(), 256, (0, 256), color='red', alpha=0.7)
-    plt.title('Histogram Ảnh Sau Xử Lý')
-    
-    plt.show()

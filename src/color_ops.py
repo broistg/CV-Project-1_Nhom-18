@@ -9,12 +9,6 @@ def rgb_to_grayscale(image):
     Mắt người nhạy cảm nhất với màu xanh lá (Green), sau đó đến đỏ (Red) và kém nhất với xanh dương (Blue).
     Do đó, công thức tính độ sáng (Luminance) chuẩn là trung bình có trọng số:
     Y = 0.299 * R + 0.587 * G + 0.114 * B
-    
-    Args:
-        image (numpy.ndarray): Ảnh đầu vào chuẩn RGB (H, W, 3).
-        
-    Returns:
-        numpy.ndarray: Ảnh xám (H, W) kiểu uint8.
     """
     if len(image.shape) != 3 or image.shape[2] != 3:
         raise ValueError("Input phải là ảnh màu 3 kênh (RGB)")

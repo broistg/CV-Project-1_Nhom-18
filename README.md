@@ -10,7 +10,7 @@ Dự án hiện thực hóa các kỹ thuật xử lý ảnh cơ bản:
 - **Biểu diễn ảnh:** Chuyển đổi RGB và Grayscale, tách/gộp các kênh màu
 - **Lọc ảnh:** Low-pass (làm trơn), High-pass (tách biên)
 
-Sử dụng **Python** và **OpenCV**.
+Sử dụng **Python** và **OpenCV** (chỉ dùng load ảnh và hỗ trợ phép toán convolution).
 
 ## 👥 Thành viên nhóm
 
@@ -31,6 +31,7 @@ CV-Project-1_Nhom-18/
 ├── notebooks/
 │   └── CV_Project_1_Demo.ipynb # File demo chính
 ├── src/
+│   ├── __init__.py             # Định nghĩa package
 │   ├── color_ops.py            # Xử lý màu & kênh
 │   ├── spatial_filters.py      # Low-pass & High-pass filters
 │   └── utils.py                # Hàm hỗ trợ
@@ -76,7 +77,7 @@ jupyter notebook notebooks/CV_Project_1_Demo.ipynb
 **Phần 2: Lọc ảnh**
 - [x] Low-pass: Mean Filter, Gaussian Filter
 - [x] High-pass: Sobel Filter, Laplacian Filter
-- [ ] Visualization: So sánh ảnh gốc với sau xử lý
+- [x] Visualization: So sánh ảnh gốc với sau xử lý
 
 ## 🤝 Cam kết
 
