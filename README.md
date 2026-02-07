@@ -36,7 +36,7 @@ CV-Project-1_Nhom-18/
 │   ├── spatial_filters.py      # Low-pass & High-pass filters
 │   └── utils.py                # Hàm hỗ trợ
 ├── report/
-│   └── CV_Project_1.pdf
+│   └── CV_Project_title_1_2310653_Lê Tiến Đạt_2233163_Nguyễn Anh Duy_2111493_Nguyễn Minh Khánh_2011706_Nguyễn Nhựt Nguyên.pdf
 ├── requirements.txt
 └── README.md
 ```
